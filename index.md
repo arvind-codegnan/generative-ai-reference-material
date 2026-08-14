@@ -11,10 +11,10 @@ Part 1: Generative AI with Java
 Part 2: Generative AI with Spring
 ```
 
-| Part | Notes | Main coverage |
+| Part | Title | Main coverage |
 | --- | --- | --- |
-| 1 | [Generative AI with Java](generative-ai-with-java.md) | AI foundations, prompts, tokens, structured output, embeddings, vector databases, RAG, tools, Java `HttpClient`, streaming, memory, evaluation, security, and cost |
-| 2 | [Generative AI with Spring](generative-ai-with-spring.md) | Spring AI, `ChatClient`, advisors, JDBC chat memory, tool calling, vector stores, document ETL, RAG, PGvector, observability, testing, and MCP |
+| 1 | Generative AI with Java | AI foundations, prompts, tokens, structured output, embeddings, vector databases, RAG, tools, Java `HttpClient`, streaming, memory, evaluation, security, and cost |
+| 2 | Generative AI with Spring | Spring AI, `ChatClient`, advisors, JDBC chat memory, tool calling, vector stores, document ETL, RAG, PGvector, observability, testing, and MCP |
 
 ## Recommended Study Order
 
