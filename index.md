@@ -25,19 +25,12 @@ Part 2: Generative AI with Spring
 
 ## Technology Baseline
 
-| Technology | Version or approach |
+| Technology | Version |
 | --- | --- |
 | Java | Java 21 |
-| Core Java integration | Java `HttpClient` without Spring |
 | Spring Boot | 3.5.16 |
 | Spring AI | 1.1.8 |
-| Example model provider | OpenAI |
-
-## Course Navigation
-
-[Start Part 1: Generative AI with Java →](generative-ai-with-java.md)
-
-After completing Part 1, use its **Next** link to open Part 2. Both note pages contain **Course Home**, **Previous**, and **Next** links for bidirectional navigation.
+| Model Provider | OpenAI |
 
 ---
 
