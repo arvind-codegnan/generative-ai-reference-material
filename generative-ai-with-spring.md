@@ -1,10 +1,9 @@
-<a name="top"></a>
-
 # Generative AI for Java Professionals
 
 > # Part 2: Generative AI with Spring ##
 
 ## Table of Contents
+<a name="top"></a>
 
 - [1. What Does Spring Add to a Generative AI Application?](#1-what-does-spring-add-to-a-generative-ai-application)
 - [2. Spring Boot and Spring AI](#2-spring-boot-and-spring-ai)
