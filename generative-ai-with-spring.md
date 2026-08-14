@@ -1,9 +1,6 @@
-# Generative AI with Spring Notes for Java Freshers
+# Generative AI for Java Professionals
 
-> **Continuation:** This is a separate continuation of `generative-ai-notes-for-java-freshers.md`. It assumes that you already understand prompts, tokens, context windows, structured output, embeddings, vector databases, RAG, tool calling, and basic Java HTTP integration.  
-> **Technology baseline:** Java 21, Spring Boot 3.5.16, and Spring AI 1.1.8.  
-> **Version correction:** Spring AI `1.1.18` was requested, but that version is not published. The official Spring AI 1.1.x documentation identifies `1.1.8` as the published patch release. Using `1.1.18` in Maven would cause dependency resolution to fail.  
-> **Examples:** OpenAI is used as the concrete model provider. The main Spring AI abstractions are provider-neutral.
+> # Part 2: Generative AI with Spring ##
 
 ## Table of Contents
 
