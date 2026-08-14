@@ -1,6 +1,6 @@
 # Generative AI for Java Professionals
 
-> ## Part 1: Generative AI with Java ##
+> # Part 1: Generative AI with Java ##
 
 ## Table of Contents
 
