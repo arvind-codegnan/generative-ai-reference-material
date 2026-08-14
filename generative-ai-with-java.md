@@ -1,6 +1,6 @@
 # Generative AI for Java Professionals
 
-> **Part 1: Generative AI with Java**
+> ## Part 1: Generative AI with Java ##
 
 ## Table of Contents
 
@@ -820,7 +820,7 @@ Common evaluation criteria include:
 
 Generative AI tests should not always expect one exact string. They should test required facts, structure, boundaries, safety, and acceptable variation.
 
-## 24. Security Privacy and Responsible AI
+## 24. Security, Privacy and Responsible AI
 
 Generative AI applications introduce risks beyond ordinary HTTP integration.
 
@@ -888,7 +888,7 @@ An application should balance quality, speed, privacy, and cost instead of autom
 - Keep provider-specific code behind a Java interface.
 - Use Java records or DTOs for request and response data.
 - Use a JSON library for serialization and deserialization.
-- Store API keys outside source code.
+- Store API keys outside the source code.
 - Set connection and request timeouts.
 - Implement controlled retry with backoff for retryable failures.
 - Validate HTTP status codes and response bodies.
@@ -996,53 +996,6 @@ Test required facts, structure, grounding, safety, latency, cost, and acceptable
 
 Generative AI can assist with coding and analysis, but Java developers are still responsible for architecture, correctness, security, integration, testing, and business decisions.
 
-## 29. Quick Revision
+---
 
-```text
-Generative AI
- ├── Models
- │    ├── Large Language Models
- │    ├── Image and Audio Models
- │    └── Embedding Models
- ├── Prompting
- │    ├── Instructions
- │    ├── Context
- │    ├── Message Roles
- │    └── Output Format
- ├── Enterprise Integration
- │    ├── Structured Output
- │    ├── RAG
- │    ├── Tool Calling
- │    └── Conversation Memory
- ├── Core Java
- │    ├── HttpClient
- │    ├── CompletableFuture
- │    ├── Records and DTOs
- │    └── JSON Processing
- └── Production Concerns
-      ├── Security and Privacy
-      ├── Evaluation
-      ├── Cost and Performance
-      └── Monitoring
-```
-
-The most important Generative AI application flow is:
-
-```text
-Validate Input → Build Prompt → Call Model → Check Response
-               → Parse Output → Validate Result → Return Safely
-```
-
-For RAG applications:
-
-```text
-Prepare Documents → Split → Embed → Store
-User Question → Retrieve Relevant Context → Generate → Verify
-```
-
-For tool-calling applications:
-
-```text
-Define Allowed Tools → Model Requests Tool → Validate Arguments
-                     → Authorize → Execute → Return Result → Generate Answer
-```
+[Home](index.md) ▪️ [Part 2: Generative AI with Spring](generative-ai-with-spring.md)
