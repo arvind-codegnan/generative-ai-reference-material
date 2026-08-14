@@ -4,13 +4,6 @@
 
 ## Learning Path
 
-```text
-Part 1: Generative AI with Java
-                         |
-                         v
-Part 2: Generative AI with Spring
-```
-
 | Part | Title | Main coverage |
 | --- | --- | --- |
 | 1 | [Part 1: Generative AI with Java](generative-ai-with-java.md) | AI foundations, prompts, tokens, structured output, embeddings, vector databases, RAG, tools, Java `HttpClient`, streaming, memory, evaluation, security, and cost |
