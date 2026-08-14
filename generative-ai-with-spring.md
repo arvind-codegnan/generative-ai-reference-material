@@ -67,6 +67,7 @@ Java code → ChatClient / ChatModel → Spring AI integration → AI provider
 ```
 
 Spring AI does not contain an LLM. It connects a Spring application to external or local AI models.
+
 [↑ Go to Top](#top)
 
 ## 2. Spring Boot and Spring AI
@@ -96,6 +97,7 @@ Your services receive ChatClient, ChatModel, or EmbeddingModel beans
 ```
 
 The Spring AI API reduces provider-specific code, but model capabilities still differ. A feature supported by one provider or model may not be supported by another.
+
 [↑ Go to Top](#top)
 
 ## 3. Core Java Integration vs Spring AI
