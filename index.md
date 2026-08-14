@@ -4,12 +4,11 @@
 
 ## Target Audience
 
-The material is suitable for:
+The reference material is suitable for:
 
 - Java freshers
 - Learners who understand basic Java syntax and object-oriented programming
-- Students beginning AI application development
-- Trainers delivering Java and Generative AI courses
+- Learners beginning AI application development
 - Developers progressing from manual HTTP integration to Spring AI
 
 ## Prerequisites
@@ -23,7 +22,7 @@ Learners should understand:
 - REST API fundamentals
 - Environment variables
 - Basic SQL and JDBC
-- Spring fundamentals, especially dependency injection, Spring beans, configuration, services, and REST controllers.
+- Spring fundamentals, especially dependency injection, Spring beans, configuration, services, and REST controllers
 
 ## Learning Outcomes
 
