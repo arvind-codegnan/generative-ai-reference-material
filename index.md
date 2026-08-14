@@ -1,15 +1,14 @@
 # Generative AI for Java Professionals
 
-> A two-part learning path covering Generative AI first with Java and then with Spring.
+> A two-part reference material covering Generative AI first with Java and then with Spring.
 
 ## Target Audience
 
 The reference material is suitable for:
 
-- Java freshers
+- Learners who are Java freshers or working professionals.
 - Learners who understand basic Java syntax and object-oriented programming
 - Learners beginning AI application development
-- Developers progressing from manual HTTP integration to Spring AI
 
 ## Prerequisites
 
@@ -40,7 +39,7 @@ After completing both parts, learners should be able to:
 - Integrate Spring Boot applications with Spring AI.
 - Apply validation, security, evaluation, observability, and cost controls.
 
-## Learning Path
+## Reference Material Path
 
 | Part | Title | Main coverage |
 | --- | --- | --- |
