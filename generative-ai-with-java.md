@@ -4,7 +4,7 @@
 
 ## Table of Contents
 
-[1. What Is Generative AI?](#1-what-is-generative-ai)  
+- [1. What Is Generative AI?](#1-what-is-generative-ai)
 - [2. Why Should Java Developers Learn Generative AI?](#2-why-should-java-developers-learn-generative-ai)
 - [3. AI vs Machine Learning vs Deep Learning vs Generative AI](#3-ai-vs-machine-learning-vs-deep-learning-vs-generative-ai)
 - [4. Basic Generative AI Workflow](#4-basic-generative-ai-workflow)
