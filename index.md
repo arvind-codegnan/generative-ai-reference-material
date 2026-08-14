@@ -2,6 +2,45 @@
 
 > A two-part learning path covering Generative AI first with Java and then with Spring.
 
+## Target Audience
+
+The material is suitable for:
+
+- Java freshers
+- Learners who understand basic Java syntax and object-oriented programming
+- Students beginning AI application development
+- Trainers delivering Java and Generative AI courses
+- Developers progressing from manual HTTP integration to Spring AI
+
+## Prerequisites
+
+Learners should understand:
+
+- Java classes, objects, interfaces, and records
+- Collections and exception handling
+- Basic JSON
+- Maven fundamentals
+- REST API fundamentals
+- Environment variables
+- Basic SQL and JDBC
+- Spring fundamentals, especially dependency injection, Spring beans, configuration, services, and REST controllers.
+
+## Learning Outcomes
+
+After completing both parts, learners should be able to:
+
+- Explain essential Generative AI concepts using Java terminology.
+- Integrate a Java application with an AI model API.
+- Design system messages, user messages, and prompt templates.
+- Convert generated output into validated Java objects.
+- Stream generated responses.
+- Maintain conversation context safely.
+- Expose approved Java operations as AI tools.
+- Create embeddings and perform semantic searches.
+- Explain and implement a basic RAG workflow.
+- Integrate Spring Boot applications with Spring AI.
+- Apply validation, security, evaluation, observability, and cost controls.
+
 ## Learning Path
 
 | Part | Title | Main coverage |
