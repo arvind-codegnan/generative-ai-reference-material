@@ -6,8 +6,8 @@
 
 - [1. What Does Spring Add to a Generative AI Application?](#1-what-does-spring-add-to-a-generative-ai-application)
 - [2. Spring Boot and Spring AI](#2-spring-boot-and-spring-ai)
-- [3. Core Java Integration vs Spring AI](#4-core-java-integration-vs-spring-ai)
-- [4. Spring AI Application Architecture](#5-spring-ai-application-architecture)
+- [3. Core Java Integration vs Spring AI](#3-core-java-integration-vs-spring-ai)
+- [4. Spring AI Application Architecture](#4-spring-ai-application-architecture)
 - [5. Create the Maven Project](#6-create-the-maven-project)
 - [6. Configure the Model Provider](#7-configure-the-model-provider)
 - [7. Auto-Configuration and Dependency Injection](#8-auto-configuration-and-dependency-injection)
