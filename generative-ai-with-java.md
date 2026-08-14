@@ -1,7 +1,6 @@
-# Generative AI Notes for Java Freshers
+# Generative AI for Java Professionals
 
-> **Scope:** Java 21 and Core Java concepts only. These notes do not use Spring or Spring Boot.  
-> **Audience:** Java freshers who are new to Artificial Intelligence and Generative AI.
+> **Part 1: Generative AI with Java**
 
 ## Table of Contents
 
