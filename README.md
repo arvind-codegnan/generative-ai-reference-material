@@ -158,4 +158,4 @@ After completing both parts, learners should be able to:
 
 ## Course Navigation
 
-[Course Home](generative-ai-java-index.md) · [Part 1: Core Java](generative-ai-notes-for-java-freshers.md) · [Part 2: Spring AI](generative-ai-with-spring-notes-for-java-freshers.md)
+[Course Home](generative-ai-java-index.md) | [Part 1: Core Java](generative-ai-notes-for-java-freshers.md) | [Part 2: Spring AI](generative-ai-with-spring-notes-for-java-freshers.md)
