@@ -1684,7 +1684,6 @@ Suggested endpoints:
 
 | Error or symptom | Likely cause | Correction |
 | --- | --- | --- |
-| Maven cannot find Spring AI 1.1.18 | The version is not published | Use Spring AI 1.1.8 |
 | No `ChatClient.Builder` bean | Model starter or configuration is missing | Add one model starter and valid provider settings |
 | 401 or 403 from provider | Missing, invalid, or unauthorized key | Check the environment variable and provider account |
 | Model not found | The configured model is unavailable | Use a model enabled for the provider account |
@@ -1788,51 +1787,6 @@ No. RAG can improve grounding, but retrieval can be wrong and the model can stil
 
 Token usage affects cost, context-window limits, response time, and the amount of information sent to the provider.
 
-## 37. Quick Revision
-
-- Spring Boot supplies application infrastructure and auto-configuration.
-- Spring AI supplies portable AI application abstractions.
-- The runnable baseline in these notes is Java 21, Spring Boot 3.5.16, and Spring AI 1.1.8.
-- `1.1.18` is not a published Spring AI version.
-- Import `spring-ai-bom` to align Spring AI modules.
-- Add one model-provider starter, such as `spring-ai-starter-model-openai`.
-- Keep API keys outside source control.
-- Use `ChatClient` for most fluent application code.
-- Use `ChatModel` when lower-level control is needed.
-- `.content()` returns generated text.
-- `.chatResponse()` returns richer response information.
-- `.entity()` maps structured output to a Java type.
-- Streaming returns a `Flux` and normally requires reactive support.
-- Advisors implement reusable AI interaction patterns.
-- `MessageChatMemoryAdvisor` connects chat memory to `ChatClient`.
-- Supply `ChatMemory.CONVERSATION_ID` on every memory-enabled call.
-- JDBC memory survives application restarts.
-- `@Tool` exposes carefully selected Java methods to a model.
-- Authorization and validation must remain in Java code.
-- `EmbeddingModel` converts content into vectors.
-- `VectorStore` stores documents and performs similarity search.
-- ETL reads, transforms, and loads documents for retrieval.
-- `QuestionAnswerAdvisor` provides a simple RAG flow.
-- PGvector is a practical PostgreSQL-based vector store.
-- RAG improves grounding but does not guarantee truth.
-- Actuator and Micrometer help observe AI operations.
-- Prompt and completion logging can expose sensitive data.
-- Test deterministic code separately from live model behavior.
-- Control cost with model choice, limits, retrieval quality, memory size, and monitoring.
-- MCP standardizes connections to external AI tools and resources.
-
-## 38. Official References
-
-- [Spring AI 1.1 reference documentation](https://docs.spring.io/spring-ai/reference/1.1/)
-- [Spring AI 1.1 getting started](https://docs.spring.io/spring-ai/reference/1.1/getting-started.html)
-- [Spring AI 1.1 ChatClient API](https://docs.spring.io/spring-ai/reference/1.1/api/chatclient.html)
-- [Spring AI 1.1 chat memory](https://docs.spring.io/spring-ai/reference/1.1/api/chat-memory.html)
-- [Spring AI 1.1 tool calling](https://docs.spring.io/spring-ai/reference/1.1/api/tools.html)
-- [Spring AI 1.1 structured output](https://docs.spring.io/spring-ai/reference/1.1/api/structured-output-converter.html)
-- [Spring AI 1.1 MCP](https://docs.spring.io/spring-ai/reference/1.1/api/mcp/mcp-overview.html)
-- [Spring Boot 3.5.16 reference documentation](https://docs.spring.io/spring-boot/3.5/)
-- [Spring Boot 3.5.16 system requirements](https://docs.spring.io/spring-boot/3.5/system-requirements.html)
-
 ---
 
-These notes deliberately use Spring AI 1.1.x APIs. Check the official upgrade notes before moving the examples to Spring AI 2.x.
+[Home](index.md) ▪️ [Part 1: Generative AI with Java](generative-ai-with-java.md)
