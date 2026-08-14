@@ -94,38 +94,7 @@ Your services receive ChatClient, ChatModel, or EmbeddingModel beans
 
 The Spring AI API reduces provider-specific code, but model capabilities still differ. A feature supported by one provider or model may not be supported by another.
 
-## 3. Version Baseline and Requirements
-
-These notes use the following baseline:
-
-| Component | Version used in these notes |
-| --- | --- |
-| Java | 21 |
-| Spring Boot | 3.5.16 |
-| Spring AI | 1.1.8 |
-| Build tool | Maven 3.6.3 or later |
-
-Spring Boot 3.5.16 requires Java 17 or later. Java 21 is a suitable long-term-support choice and continues the baseline used in the earlier notes.
-
-Spring AI 1.1.x supports the Spring Boot 3.4.x and 3.5.x lines.
-
-### Important Version Rule
-
-Do not mix examples written for Spring AI 2.x into a 1.1.x project without checking the migration documentation. Artifact names, configuration properties, packages, and APIs can change between major release lines.
-
-If Maven reports this error:
-
-```text
-Could not find artifact org.springframework.ai:spring-ai-bom:pom:1.1.18
-```
-
-use the published version:
-
-```xml
-<spring-ai.version>1.1.8</spring-ai.version>
-```
-
-## 4. Core Java Integration vs Spring AI
+## 3. Core Java Integration vs Spring AI
 
 | Core Java approach | Spring AI approach |
 | --- | --- |
@@ -149,7 +118,7 @@ Spring AI is an abstraction, not magic. The developer must still:
 - Evaluate answer quality
 - Monitor latency, tokens, and cost
 
-## 5. Spring AI Application Architecture
+## 4. Spring AI Application Architecture
 
 A clean beginner-friendly structure separates HTTP, AI orchestration, business logic, and data access.
 
@@ -184,7 +153,7 @@ Recommended responsibilities:
 
 Do not place every operation in the controller. Thin controllers and focused services are easier to test and maintain.
 
-## 6. Create the Maven Project
+## 5. Create the Maven Project
 
 The following `pom.xml` provides the base application. It uses the Spring Boot parent and imports the Spring AI BOM.
 
@@ -291,7 +260,7 @@ Run the application with:
 ./mvnw spring-boot:run
 ```
 
-## 7. Configure the Model Provider
+## 6. Configure the Model Provider
 
 Create `src/main/resources/application.yml`:
 
@@ -336,7 +305,7 @@ Important properties:
 
 The model name is a provider value and can change independently of Spring AI. Select a model that is available to your account and supports the features you use.
 
-## 8. Auto-Configuration and Dependency Injection
+## 7. Auto-Configuration and Dependency Injection
 
 Because the OpenAI starter is present and configuration is supplied, Spring Boot creates useful beans such as:
 
@@ -370,7 +339,7 @@ Advantages of constructor injection:
 
 `ChatClient.Builder` is a builder. `ChatClient` is the configured client created from it. Build the client once and reuse it unless requests require meaningfully different default configurations.
 
-## 9. ChatModel and ChatClient
+## 8. ChatModel and ChatClient
 
 Spring AI offers both a lower-level model API and a higher-level fluent client.
 
@@ -420,7 +389,7 @@ public class FluentChatService {
 
 For most application code, begin with `ChatClient`. Learn `ChatModel` as well because `ChatClient` is built on model abstractions.
 
-## 10. Create the First AI Service
+## 9. Create the First AI Service
 
 A service can set stable behavior with a default system message.
 
@@ -472,7 +441,7 @@ Generated text returned by content()
 
 The model output is untrusted data. Do not treat it as an authorization decision, database command, or verified fact without application-level checks.
 
-## 11. Expose a REST Endpoint
+## 10. Expose a REST Endpoint
 
 Use Java records for small request and response DTOs.
 
@@ -537,7 +506,7 @@ Content-Type: application/json
 
 Keep the controller responsible for HTTP concerns and the service responsible for AI orchestration.
 
-## 12. System Messages and Prompt Templates
+## 11. System Messages and Prompt Templates
 
 A system message defines stable behavior. A user message contains the current request.
 
@@ -579,7 +548,7 @@ Benefits of templates:
 
 Prompt templates do not automatically prevent prompt injection. Validate input and keep permissions outside the model.
 
-## 13. Model Options
+## 12. Model Options
 
 Default options can be placed in configuration. Request-specific options can be supplied in Java.
 
@@ -614,7 +583,7 @@ Use provider-neutral options where possible. Use provider-specific options only 
 
 Do not change temperature and top-p together unless you understand the combined effect.
 
-## 14. ChatResponse and Metadata
+## 13. ChatResponse and Metadata
 
 `.content()` is convenient when only text is required. Use `.chatResponse()` when the application needs richer data.
 
@@ -644,7 +613,7 @@ Possible uses:
 
 Metadata availability differs by provider. Code should not assume every provider returns every field.
 
-## 15. Structured Output into Java Records
+## 14. Structured Output into Java Records
 
 Business code should prefer typed data over parsing free-form text.
 
@@ -712,7 +681,7 @@ Structured conversion is still an AI-assisted operation. Validate the returned o
 
 Never assume that successful deserialization proves factual correctness.
 
-## 16. Streaming Responses
+## 15. Streaming Responses
 
 A normal call waits for the complete answer. Streaming returns smaller pieces as they are generated.
 
@@ -766,7 +735,7 @@ Streaming improves perceived responsiveness, but it adds concerns:
 - Backpressure and cancellation matter.
 - Tool calling may introduce blocking behavior.
 
-## 17. Advisors
+## 16. Advisors
 
 An advisor intercepts and enriches a `ChatClient` request or response. Advisors are similar in spirit to filters or interceptors, but they are designed for AI interaction patterns.
 
@@ -816,7 +785,7 @@ Do not enable prompt and response logging casually in production. Prompts can co
 
 Advisor order matters. For example, memory may enrich a question before RAG performs retrieval.
 
-## 18. Conversation Memory
+## 17. Conversation Memory
 
 LLMs are stateless. Spring AI memory stores selected earlier messages and supplies them to later calls.
 
@@ -885,7 +854,7 @@ Never use one shared conversation ID for all users. That can leak context betwee
 
 Chat memory is not the same as full chat history. Store the complete audit history separately when the application needs it.
 
-## 19. Persistent Chat Memory with JDBC
+## 18. Persistent Chat Memory with JDBC
 
 In-memory storage disappears when the application restarts. Use a persistent repository for durable memory.
 
@@ -951,7 +920,7 @@ spring:
 
 Supported databases and behavior depend on the Spring AI release. Verify tool-message persistence if chat memory and tool calling are combined.
 
-## 20. Tool Calling with Spring Methods
+## 19. Tool Calling with Spring Methods
 
 Tool calling allows a model to request a deterministic Java operation. The Java application executes the operation and returns its result to the model.
 
@@ -1022,7 +991,7 @@ Tool rules:
 
 The model chooses whether to request a tool, but the application remains responsible for permission and execution.
 
-## 21. Embeddings with EmbeddingModel
+## 20. Embeddings with EmbeddingModel
 
 An embedding converts text into a numeric vector that represents meaning.
 
@@ -1068,7 +1037,7 @@ Use embeddings for:
 
 Vectors from different embedding models may have different dimensions and meanings. Do not index documents with one embedding model and query them with an incompatible model.
 
-## 22. Documents and VectorStore
+## 21. Documents and VectorStore
 
 Spring AI represents knowledge items with `Document` objects.
 
@@ -1116,7 +1085,7 @@ Vector search finds semantically similar documents. It does not prove that a doc
 
 `SimpleVectorStore` is useful for learning and tests, not production deployment.
 
-## 23. ETL for AI Documents
+## 22. ETL for AI Documents
 
 The Spring AI ETL pipeline prepares documents for a vector store.
 
@@ -1170,7 +1139,7 @@ Keep useful metadata such as:
 
 Never load an untrusted user-supplied URL directly into a document reader without protection against server-side request forgery.
 
-## 24. Retrieval-Augmented Generation
+## 23. Retrieval-Augmented Generation
 
 RAG retrieves relevant application data and adds it to the model request.
 
@@ -1240,7 +1209,7 @@ RAG has two separate workflows:
 
 RAG reduces some hallucinations, but does not guarantee truth. Evaluate retrieval and generation separately.
 
-## 25. PGvector for a Production-Style RAG Application
+## 24. PGvector for a Production-Style RAG Application
 
 PGvector adds vector similarity search to PostgreSQL.
 
@@ -1286,7 +1255,7 @@ Important points:
 
 Never retrieve documents solely by similarity in a multi-tenant application. Add an authorization filter so a user can retrieve only permitted documents.
 
-## 26. Exception Handling and Resilience
+## 25. Exception Handling and Resilience
 
 AI calls can fail because of:
 
@@ -1340,7 +1309,7 @@ Retry only transient failures. Use exponential backoff and a small retry limit. 
 
 For operations that can cause side effects, add idempotency controls before retrying.
 
-## 27. Validation and API Design
+## 26. Validation and API Design
 
 Validate the request before spending tokens.
 
@@ -1369,7 +1338,7 @@ Good API practices:
 
 Do not place prompts in query parameters when they may contain confidential information. URLs are commonly logged by browsers, proxies, and servers.
 
-## 28. Observability and Logging
+## 27. Observability and Logging
 
 Spring AI integrates with Spring Boot Actuator and Micrometer observations.
 
@@ -1410,7 +1379,7 @@ If detailed logging is temporarily enabled:
 - Restrict log access.
 - Disable the setting after diagnosis.
 
-## 29. Testing and Evaluation
+## 28. Testing and Evaluation
 
 Generative AI testing has deterministic and probabilistic parts.
 
@@ -1472,7 +1441,7 @@ assertTrue(quiz.questions().stream()
                 && question.correctChoiceIndex() < question.choices().size()));
 ```
 
-## 30. Security and Responsible AI
+## 29. Security and Responsible AI
 
 Treat model input, retrieved documents, tool results, and model output as untrusted data.
 
@@ -1512,7 +1481,7 @@ Before using generated output:
 - Validate URLs and filenames.
 - Require approval for financial, legal, medical, or destructive actions.
 
-## 31. Cost and Performance
+## 30. Cost and Performance
 
 AI response time normally includes more than model generation.
 
@@ -1540,7 +1509,7 @@ Cost and performance techniques:
 
 Do not cache answers containing user-specific, permission-sensitive, or rapidly changing data without a correct cache key and expiry policy.
 
-## 32. Model Context Protocol
+## 31. Model Context Protocol
 
 Model Context Protocol, or MCP, is a standard for connecting AI applications to external tools and resources.
 
@@ -1583,7 +1552,7 @@ MCP is useful when tools should be shared across applications or languages. A no
 
 MCP does not remove security requirements. Authenticate connections, authorize each capability, validate arguments, restrict network access, and audit sensitive operations.
 
-## 33. Suggested Package Structure
+## 32. Suggested Package Structure
 
 ```text
 com.example.javaai
@@ -1614,7 +1583,7 @@ com.example.javaai
 
 Organize by feature when the application grows. The important principle is separation of responsibilities, not a particular folder name.
 
-## 34. Mini-Project: Java Learning Assistant
+## 33. Mini-Project: Java Learning Assistant
 
 Build the application in stages.
 
@@ -1677,7 +1646,7 @@ Suggested endpoints:
 | `POST` | `/api/ai/conversations/{id}/messages` | Chat with memory |
 | `POST` | `/api/ai/knowledge/ask` | RAG-based answers |
 
-## 35. Common Errors
+## 34. Common Errors
 
 | Error or symptom | Likely cause | Correction |
 | --- | --- | --- |
@@ -1694,7 +1663,7 @@ Suggested endpoints:
 | Logs expose prompts | Detailed logging was enabled | Disable it and redact sensitive data |
 | Cost increases unexpectedly | Unbounded prompts, output, memory, or retries | Add limits, quotas, monitoring, and budgets |
 
-## 36. Frequently Asked Interview Questions
+## 35. Frequently Asked Interview Questions
 
 ### What Is Spring AI?
 
