@@ -67,4 +67,4 @@ After completing both parts, learners should be able to:
 
 ---
 
-[Part 1: Generative AI with Java](generative-ai-with-java.md)  |  [Part 2: Generative AI with Spring](generative-ai-with-spring.md)
+[Part 1: Generative AI with Java](generative-ai-with-java.md) :black_medium_small_square: [Part 2: Generative AI with Spring](generative-ai-with-spring.md)
