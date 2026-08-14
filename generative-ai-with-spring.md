@@ -3,7 +3,6 @@
 > # Part 2: Generative AI with Spring ##
 
 ## Table of Contents
-<a name="top"></a>
 
 - [1. What Does Spring Add to a Generative AI Application?](#1-what-does-spring-add-to-a-generative-ai-application)
 - [2. Spring Boot and Spring AI](#2-spring-boot-and-spring-ai)
@@ -67,7 +66,7 @@ Java code → ChatClient / ChatModel → Spring AI integration → AI provider
 
 Spring AI does not contain an LLM. It connects a Spring application to external or local AI models.
 
-[↑ Go to Top](#top)
+[↑ Go to Top](#table-of-contents)
 
 ## 2. Spring Boot and Spring AI
 
@@ -97,7 +96,7 @@ Your services receive ChatClient, ChatModel, or EmbeddingModel beans
 
 The Spring AI API reduces provider-specific code, but model capabilities still differ. A feature supported by one provider or model may not be supported by another.
 
-[↑ Go to Top](#top)
+[↑ Go to Top](#table-of-contents)
 
 ## 3. Core Java Integration vs Spring AI
 
