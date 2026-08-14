@@ -66,7 +66,7 @@ Java code → ChatClient / ChatModel → Spring AI integration → AI provider
 
 Spring AI does not contain an LLM. It connects a Spring application to external or local AI models.
 
-[↑ Go to Top](#table-of-contents)
+[↑ Go to Table of Contents](#table-of-contents)
 
 ## 2. Spring Boot and Spring AI
 
@@ -96,7 +96,7 @@ Your services receive ChatClient, ChatModel, or EmbeddingModel beans
 
 The Spring AI API reduces provider-specific code, but model capabilities still differ. A feature supported by one provider or model may not be supported by another.
 
-[↑ Go to Top](#table-of-contents)
+[↑ Go to Table of Contents](#table-of-contents)
 
 ## 3. Core Java Integration vs Spring AI
 
@@ -121,6 +121,8 @@ Spring AI is an abstraction, not magic. The developer must still:
 - Control which tools the model may call
 - Evaluate answer quality
 - Monitor latency, tokens, and cost
+
+[↑ Go to Table of Contents](#table-of-contents)
 
 ## 4. Spring AI Application Architecture
 
@@ -156,6 +158,8 @@ Recommended responsibilities:
 | Configuration | Beans, model defaults, advisors, and security-related settings |
 
 Do not place every operation in the controller. Thin controllers and focused services are easier to test and maintain.
+
+[↑ Go to Table of Contents](#table-of-contents)
 
 ## 5. Create the Maven Project
 
@@ -264,6 +268,8 @@ Run the application with:
 ./mvnw spring-boot:run
 ```
 
+[↑ Go to Table of Contents](#table-of-contents)
+
 ## 6. Configure the Model Provider
 
 Create `src/main/resources/application.yml`:
@@ -308,6 +314,8 @@ Important properties:
 | `spring.ai.openai.chat.options.temperature` | Sets the default response randomness |
 
 The model name is a provider value and can change independently of Spring AI. Select a model that is available to your account and supports the features you use.
+
+[↑ Go to Table of Contents](#table-of-contents)
 
 ## 7. Auto-Configuration and Dependency Injection
 
