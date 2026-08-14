@@ -61,7 +61,9 @@ After completing both parts, learners should be able to:
 | Java | 21 |
 | Spring Boot | 3.5.16 |
 | Spring AI | 1.1.8 |
-| Model Provider | OpenAI |
+| AI Vector Database | PostgreSQL with PGvector |
+| AI Provider | OpenAI |
+| Build tool | Maven 3.9.16 |
 
 ---
 
