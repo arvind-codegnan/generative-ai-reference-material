@@ -27,5 +27,4 @@
 
 ---
 
-[Part 1: Generative AI with Java](generative-ai-with-java.md)<br/>
-[Part 2: Generative AI with Spring](generative-ai-with-spring.md)
+[Part 1: Generative AI with Java](generative-ai-with-java.md)  |  [Part 2: Generative AI with Spring](generative-ai-with-spring.md)
