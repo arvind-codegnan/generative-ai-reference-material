@@ -156,6 +156,6 @@ After completing both parts, learners should be able to:
 - Verify model names and provider capabilities before running an example.
 - Treat every model response as untrusted data that requires validation.
 
-## Course Navigation
+## Navigation
 
-[Course Home](generative-ai-java-index.md) | [Part 1: Core Java](generative-ai-notes-for-java-freshers.md) | [Part 2: Spring AI](generative-ai-with-spring-notes-for-java-freshers.md)
+[Home](index.md)  |  [Part 1: Generative AI with Java](generative-ai-with-java.md)  |  [Part 2: Generative AI with Spring](generative-ai-with-spring.md)
