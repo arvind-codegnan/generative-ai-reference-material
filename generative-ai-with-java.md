@@ -32,7 +32,6 @@
 - [26. Generative AI Best Practices](#26-generative-ai-best-practices)
 - [27. Common Generative AI Errors](#27-common-generative-ai-errors)
 - [28. Frequently Asked Interview Questions](#28-frequently-asked-interview-questions)
-- [29. Quick Revision](#29-quick-revision)
 
 ## 1. What Is Generative AI?
 
