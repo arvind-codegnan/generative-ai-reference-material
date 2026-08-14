@@ -1,6 +1,6 @@
-# Generative AI for Java Freshers
+# Generative AI for Java Professionals
 
-> A two-part learning path covering Generative AI integration first with Java and then with Spring.
+> A two-part learning path covering Generative AI first with Java and then with Spring.
 
 ## Learning Path
 
