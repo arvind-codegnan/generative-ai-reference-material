@@ -351,6 +351,8 @@ Advantages of constructor injection:
 
 `ChatClient.Builder` is a builder. `ChatClient` is the configured client created from it. Build the client once and reuse it unless requests require meaningfully different default configurations.
 
+[↑ Go to Table of Contents](#table-of-contents)
+
 ## 8. ChatModel and ChatClient
 
 Spring AI offers both a lower-level model API and a higher-level fluent client.
@@ -400,6 +402,8 @@ public class FluentChatService {
 ```
 
 For most application code, begin with `ChatClient`. Learn `ChatModel` as well because `ChatClient` is built on model abstractions.
+
+[↑ Go to Table of Contents](#table-of-contents)
 
 ## 9. Create the First AI Service
 
@@ -452,6 +456,8 @@ Generated text returned by content()
 ```
 
 The model output is untrusted data. Do not treat it as an authorization decision, database command, or verified fact without application-level checks.
+
+[↑ Go to Table of Contents](#table-of-contents)
 
 ## 10. Expose a REST Endpoint
 
@@ -518,6 +524,8 @@ Content-Type: application/json
 
 Keep the controller responsible for HTTP concerns and the service responsible for AI orchestration.
 
+[↑ Go to Table of Contents](#table-of-contents)
+
 ## 11. System Messages and Prompt Templates
 
 A system message defines stable behavior. A user message contains the current request.
@@ -560,6 +568,8 @@ Benefits of templates:
 
 Prompt templates do not automatically prevent prompt injection. Validate input and keep permissions outside the model.
 
+[↑ Go to Table of Contents](#table-of-contents)
+
 ## 12. Model Options
 
 Default options can be placed in configuration. Request-specific options can be supplied in Java.
@@ -595,6 +605,8 @@ Use provider-neutral options where possible. Use provider-specific options only 
 
 Do not change temperature and top-p together unless you understand the combined effect.
 
+[↑ Go to Table of Contents](#table-of-contents)
+
 ## 13. ChatResponse and Metadata
 
 `.content()` is convenient when only text is required. Use `.chatResponse()` when the application needs richer data.
@@ -624,6 +636,8 @@ Possible uses:
 - Inspect multiple generations when requested.
 
 Metadata availability differs by provider. Code should not assume every provider returns every field.
+
+[↑ Go to Table of Contents](#table-of-contents)
 
 ## 14. Structured Output into Java Records
 
@@ -693,6 +707,8 @@ Structured conversion is still an AI-assisted operation. Validate the returned o
 
 Never assume that successful deserialization proves factual correctness.
 
+[↑ Go to Table of Contents](#table-of-contents)
+
 ## 15. Streaming Responses
 
 A normal call waits for the complete answer. Streaming returns smaller pieces as they are generated.
@@ -747,6 +763,8 @@ Streaming improves perceived responsiveness, but it adds concerns:
 - Backpressure and cancellation matter.
 - Tool calling may introduce blocking behavior.
 
+[↑ Go to Table of Contents](#table-of-contents)
+
 ## 16. Advisors
 
 An advisor intercepts and enriches a `ChatClient` request or response. Advisors are similar in spirit to filters or interceptors, but they are designed for AI interaction patterns.
@@ -796,6 +814,8 @@ logging:
 Do not enable prompt and response logging casually in production. Prompts can contain personal, confidential, or regulated information.
 
 Advisor order matters. For example, memory may enrich a question before RAG performs retrieval.
+
+[↑ Go to Table of Contents](#table-of-contents)
 
 ## 17. Conversation Memory
 
@@ -866,6 +886,8 @@ Never use one shared conversation ID for all users. That can leak context betwee
 
 Chat memory is not the same as full chat history. Store the complete audit history separately when the application needs it.
 
+[↑ Go to Table of Contents](#table-of-contents)
+
 ## 18. Persistent Chat Memory with JDBC
 
 In-memory storage disappears when the application restarts. Use a persistent repository for durable memory.
@@ -931,6 +953,8 @@ spring:
 ```
 
 Supported databases and behavior depend on the Spring AI release. Verify tool-message persistence if chat memory and tool calling are combined.
+
+[↑ Go to Table of Contents](#table-of-contents)
 
 ## 19. Tool Calling with Spring Methods
 
@@ -1003,6 +1027,8 @@ Tool rules:
 
 The model chooses whether to request a tool, but the application remains responsible for permission and execution.
 
+[↑ Go to Table of Contents](#table-of-contents)
+
 ## 20. Embeddings with EmbeddingModel
 
 An embedding converts text into a numeric vector that represents meaning.
@@ -1048,6 +1074,8 @@ Use embeddings for:
 ```
 
 Vectors from different embedding models may have different dimensions and meanings. Do not index documents with one embedding model and query them with an incompatible model.
+
+[↑ Go to Table of Contents](#table-of-contents)
 
 ## 21. Documents and VectorStore
 
@@ -1096,6 +1124,8 @@ SearchRequest request = SearchRequest.builder()
 Vector search finds semantically similar documents. It does not prove that a document is correct, current, or authorized for the user.
 
 `SimpleVectorStore` is useful for learning and tests, not production deployment.
+
+[↑ Go to Table of Contents](#table-of-contents)
 
 ## 22. ETL for AI Documents
 
@@ -1150,6 +1180,8 @@ Keep useful metadata such as:
 - Ingestion date
 
 Never load an untrusted user-supplied URL directly into a document reader without protection against server-side request forgery.
+
+[↑ Go to Table of Contents](#table-of-contents)
 
 ## 23. Retrieval-Augmented Generation
 
@@ -1221,6 +1253,8 @@ RAG has two separate workflows:
 
 RAG reduces some hallucinations, but does not guarantee truth. Evaluate retrieval and generation separately.
 
+[↑ Go to Table of Contents](#table-of-contents)
+
 ## 24. PGvector for a Production-Style RAG Application
 
 PGvector adds vector similarity search to PostgreSQL.
@@ -1266,6 +1300,8 @@ Important points:
 - Store tenant and access metadata for retrieval filtering.
 
 Never retrieve documents solely by similarity in a multi-tenant application. Add an authorization filter so a user can retrieve only permitted documents.
+
+[↑ Go to Table of Contents](#table-of-contents)
 
 ## 25. Exception Handling and Resilience
 
@@ -1321,6 +1357,8 @@ Retry only transient failures. Use exponential backoff and a small retry limit. 
 
 For operations that can cause side effects, add idempotency controls before retrying.
 
+[↑ Go to Table of Contents](#table-of-contents)
+
 ## 26. Validation and API Design
 
 Validate the request before spending tokens.
@@ -1347,8 +1385,9 @@ Good API practices:
 - Add request IDs for tracing.
 - Document whether an endpoint streams.
 - Define timeouts.
+- Do not place prompts in query parameters when they may contain confidential information as URLs are commonly logged by browsers, proxies, and servers.
 
-Do not place prompts in query parameters when they may contain confidential information. URLs are commonly logged by browsers, proxies, and servers.
+[↑ Go to Table of Contents](#table-of-contents)
 
 ## 27. Observability and Logging
 
@@ -1390,6 +1429,8 @@ If detailed logging is temporarily enabled:
 - Set a short retention period.
 - Restrict log access.
 - Disable the setting after diagnosis.
+
+[↑ Go to Table of Contents](#table-of-contents)
 
 ## 28. Testing and Evaluation
 
@@ -1453,6 +1494,8 @@ assertTrue(quiz.questions().stream()
                 && question.correctChoiceIndex() < question.choices().size()));
 ```
 
+[↑ Go to Table of Contents](#table-of-contents)
+
 ## 29. Security and Responsible AI
 
 Treat model input, retrieved documents, tool results, and model output as untrusted data.
@@ -1493,6 +1536,8 @@ Before using generated output:
 - Validate URLs and filenames.
 - Require approval for financial, legal, medical, or destructive actions.
 
+[↑ Go to Table of Contents](#table-of-contents)
+
 ## 30. Cost and Performance
 
 AI response time normally includes more than model generation.
@@ -1520,6 +1565,8 @@ Cost and performance techniques:
 - Track tokens by feature, tenant, and model.
 
 Do not cache answers containing user-specific, permission-sensitive, or rapidly changing data without a correct cache key and expiry policy.
+
+[↑ Go to Table of Contents](#table-of-contents)
 
 ## 31. Model Context Protocol
 
@@ -1564,6 +1611,8 @@ MCP is useful when tools should be shared across applications or languages. A no
 
 MCP does not remove security requirements. Authenticate connections, authorize each capability, validate arguments, restrict network access, and audit sensitive operations.
 
+[↑ Go to Table of Contents](#table-of-contents)
+
 ## 32. Suggested Package Structure
 
 ```text
@@ -1594,6 +1643,8 @@ com.example.javaai
 ```
 
 Organize by feature when the application grows. The important principle is separation of responsibilities, not a particular folder name.
+
+[↑ Go to Table of Contents](#table-of-contents)
 
 ## 33. Mini-Project: Java Learning Assistant
 
@@ -1658,6 +1709,8 @@ Suggested endpoints:
 | `POST` | `/api/ai/conversations/{id}/messages` | Chat with memory |
 | `POST` | `/api/ai/knowledge/ask` | RAG-based answers |
 
+[↑ Go to Table of Contents](#table-of-contents)
+
 ## 34. Common Errors
 
 | Error or symptom | Likely cause | Correction |
@@ -1674,6 +1727,8 @@ Suggested endpoints:
 | Tool receives unsafe values | Tool arguments were trusted | Validate and authorize in Java code |
 | Logs expose prompts | Detailed logging was enabled | Disable it and redact sensitive data |
 | Cost increases unexpectedly | Unbounded prompts, output, memory, or retries | Add limits, quotas, monitoring, and budgets |
+
+[↑ Go to Table of Contents](#table-of-contents)
 
 ## 35. Frequently Asked Interview Questions
 
@@ -1764,6 +1819,8 @@ No. RAG can improve grounding, but retrieval can be wrong and the model can stil
 ### Why Monitor Tokens?
 
 Token usage affects cost, context-window limits, response time, and the amount of information sent to the provider.
+
+[↑ Go to Table of Contents](#table-of-contents)
 
 ---
 
