@@ -62,6 +62,8 @@ Prompt + Context → Trained AI Model → Generated Output
 
 The generated response is not guaranteed to be identical for every request. It must therefore be validated before being trusted or used by business logic.
 
+[↑ Go to Table of Contents](#table-of-contents)
+
 ## 2. Why Should Java Developers Learn Generative AI?
 
 Java is widely used for enterprise systems, APIs, financial applications, e-commerce platforms, and backend services. These applications can use Generative AI to add features such as:
@@ -90,6 +92,8 @@ Important Java responsibilities include:
 - Connecting models with enterprise data
 - Monitoring cost, latency, and quality
 
+[↑ Go to Table of Contents](#table-of-contents)
+
 ## 3. AI vs Machine Learning vs Deep Learning vs Generative AI
 
 | Term | Meaning | Example |
@@ -109,6 +113,8 @@ Artificial Intelligence
 ```
 
 Generative AI is not a replacement for traditional programming. A real application normally combines deterministic Java code with probabilistic model output.
+
+[↑ Go to Table of Contents](#table-of-contents)
 
 ## 4. Basic Generative AI Workflow
 
@@ -142,6 +148,8 @@ User
 
 The Java application remains responsible for authentication, validation, authorization, error handling, logging, and business decisions.
 
+[↑ Go to Table of Contents](#table-of-contents)
+
 ## 5. Types of Generative AI Models
 
 Different models accept and produce different data types.
@@ -157,6 +165,8 @@ Different models accept and produce different data types.
 | Embedding | Text or media | Numeric vector | Semantic search |
 
 A Java application should select a model according to the required input, output, quality, latency, privacy, and cost.
+
+[↑ Go to Table of Contents](#table-of-contents)
 
 ## 6. Large Language Models
 
@@ -182,6 +192,8 @@ An LLM does not understand information in the same way that a human does. It cal
 - **Context-dependent:** Its response depends heavily on the supplied prompt.
 - **Knowledge-limited:** Its built-in knowledge is limited by its training and configuration.
 - **Fallible:** It can produce convincing but incorrect information.
+
+[↑ Go to Table of Contents](#table-of-contents)
 
 ## 7. Tokens and Tokenization
 
@@ -219,6 +231,8 @@ Token counts are important because they affect:
 
 Tokenization differs between models. Java applications should use provider-supplied token-counting tools when an exact count is required.
 
+[↑ Go to Table of Contents](#table-of-contents)
+
 ## 8. Prompts
 
 A **prompt** is the instruction and context sent to a Generative AI model.
@@ -249,6 +263,8 @@ An effective prompt normally specifies:
 
 Prompt quality strongly influences response quality.
 
+[↑ Go to Table of Contents](#table-of-contents)
+
 ## 9. Message Roles
 
 Chat-based model APIs often organize prompts as messages with roles.
@@ -270,6 +286,8 @@ User: Give one more example.
 ```
 
 Applications should keep trusted system instructions separate from untrusted user input whenever the API supports roles.
+
+[↑ Go to Table of Contents](#table-of-contents)
 
 ## 10. Prompt Templates
 
@@ -298,6 +316,8 @@ System.out.println(prompt);
 ```
 
 Do not insert untrusted text into a prompt without validation. User data can contain instructions that attempt to override application rules.
+
+[↑ Go to Table of Contents](#table-of-contents)
 
 ## 11. Prompt Engineering
 
@@ -334,6 +354,8 @@ Do not exceed 700 words.
 
 Prompts should be tested against realistic, incorrect, incomplete, and malicious inputs.
 
+[↑ Go to Table of Contents](#table-of-contents)
+
 ## 12. Model Parameters
 
 Model APIs normally provide configuration parameters that influence generation.
@@ -359,6 +381,8 @@ A lower temperature generally produces more focused and predictable output. A hi
 | Creative writing | Moderate to higher randomness |
 
 Exact parameter names, ranges, behavior, and availability differ between providers and models.
+
+[↑ Go to Table of Contents](#table-of-contents)
 
 ## 13. Context Windows
 
@@ -394,6 +418,8 @@ If the combined information is too large, the application must reduce it by:
 - Restricting response length
 
 Applications must reserve sufficient space for the generated response instead of filling the complete context window with input.
+
+[↑ Go to Table of Contents](#table-of-contents)
 
 ## 14. Structured Output
 
@@ -446,6 +472,8 @@ JSON Parsing and Validation
 
 Use a JSON library to serialize and deserialize dynamic data. Do not build complex JSON through string concatenation, and do not trust fields until they pass application validation.
 
+[↑ Go to Table of Contents](#table-of-contents)
+
 ## 15. Embeddings
 
 An **embedding** is a numeric vector that represents the meaning of text, an image, audio, or another content type.
@@ -469,6 +497,8 @@ Embeddings are commonly used for:
 - Retrieval-Augmented Generation
 
 The number of values in an embedding vector is called its **dimensionality**.
+
+[↑ Go to Table of Contents](#table-of-contents)
 
 ## 16. Vector Databases
 
@@ -497,6 +527,8 @@ Vector Database
 When a user submits a question, the application creates an embedding for the question and searches for nearby vectors.
 
 Vector similarity is commonly calculated using measures such as cosine similarity, dot product, or Euclidean distance. The selected database and embedding model determine the supported approach.
+
+[↑ Go to Table of Contents](#table-of-contents)
 
 ## 17. Retrieval-Augmented Generation
 
@@ -545,6 +577,8 @@ User Question → Embed → Similarity Search
 
 RAG does not guarantee correctness. Retrieval quality, chunking, prompt design, source quality, and response validation all affect the result.
 
+[↑ Go to Table of Contents](#table-of-contents)
+
 ## 18. Tool Calling
 
 **Tool calling** allows a model to request that the Java application execute an approved function.
@@ -578,6 +612,8 @@ public interface OrderStatusTool {
 ```
 
 Tool execution must use allowlisted functions, validated arguments, authorization checks, timeouts, audit logging, and controlled side effects.
+
+[↑ Go to Table of Contents](#table-of-contents)
 
 ## 19. Core Java Integration Architecture
 
@@ -627,6 +663,8 @@ public interface GenerativeModel {
 ```
 
 Keeping an interface between business logic and the external provider makes testing and provider replacement easier.
+
+[↑ Go to Table of Contents](#table-of-contents)
 
 ## 20. Calling an AI API with Java HttpClient
 
@@ -700,6 +738,8 @@ public class BasicAiRequestExample {
 - Do not log API keys or sensitive prompts.
 - Treat provider error messages as untrusted external data.
 
+[↑ Go to Table of Contents](#table-of-contents)
+
 ## 21. Asynchronous and Streaming Responses
 
 An asynchronous request allows the Java thread to continue other work while waiting for the model API.
@@ -748,6 +788,8 @@ Request → Chunk 1 → Chunk 2 → Chunk 3 → Completion
 
 Streaming protocols and event formats differ by provider. A Java client may need to process server-sent events, line-delimited JSON, or another streaming format.
 
+[↑ Go to Table of Contents](#table-of-contents)
+
 ## 22. Conversation Memory
 
 Models do not automatically remember earlier application conversations. The Java application must resend the required history or a summary of it.
@@ -792,6 +834,8 @@ history.add(new ChatMessage(
 
 Conversation memory must be limited because it consumes context-window space and may contain personal or sensitive data.
 
+[↑ Go to Table of Contents](#table-of-contents)
+
 ## 23. Evaluating AI Responses
 
 AI responses must be evaluated for quality and safety.
@@ -818,6 +862,8 @@ Common evaluation criteria include:
 | Grounding check | Verifies whether claims are supported by supplied sources |
 
 Generative AI tests should not always expect one exact string. They should test required facts, structure, boundaries, safety, and acceptable variation.
+
+[↑ Go to Table of Contents](#table-of-contents)
 
 ## 24. Security, Privacy and Responsible AI
 
@@ -851,6 +897,8 @@ Generative AI applications introduce risks beyond ordinary HTTP integration.
 
 Generated output must never be treated as automatically correct, safe, or authorized.
 
+[↑ Go to Table of Contents](#table-of-contents)
+
 ## 25. Cost and Performance
 
 Hosted AI usage commonly depends on input tokens, output tokens, selected model, and additional features.
@@ -881,6 +929,8 @@ Cost and latency can be reduced by:
 
 An application should balance quality, speed, privacy, and cost instead of automatically selecting the largest model.
 
+[↑ Go to Table of Contents](#table-of-contents)
+
 ## 26. Generative AI Best Practices
 
 - Define the business problem before selecting a model.
@@ -902,6 +952,8 @@ An application should balance quality, speed, privacy, and cost instead of autom
 - Keep humans involved in high-impact decisions.
 - Monitor quality after deployment.
 
+[↑ Go to Table of Contents](#table-of-contents)
+
 ## 27. Common Generative AI Errors
 
 | Problem | Possible reason | Suggested action |
@@ -920,6 +972,8 @@ An application should balance quality, speed, privacy, and cost instead of autom
 | Leaked secret | Credential included in code or logs | Revoke it immediately and correct secret handling |
 
 Do not retry every failure. Authentication errors, validation failures, and permanent permission errors normally require correction rather than repeated requests.
+
+[↑ Go to Table of Contents](#table-of-contents)
 
 ## 28. Frequently Asked Interview Questions
 
@@ -994,6 +1048,8 @@ Test required facts, structure, grounding, safety, latency, cost, and acceptable
 ### Can Generative AI Replace Java Developers?
 
 Generative AI can assist with coding and analysis, but Java developers are still responsible for architecture, correctness, security, integration, testing, and business decisions.
+
+[↑ Go to Table of Contents](#table-of-contents)
 
 ---
 
