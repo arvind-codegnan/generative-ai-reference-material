@@ -1,9 +1,3 @@
-<style>
-      ul {
-            list-style-type: none
-      }
-</style>
-
 # Generative AI for Java Professionals
 
 > # Part 2: Generative AI with Spring ##
