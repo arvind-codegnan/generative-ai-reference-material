@@ -2,7 +2,7 @@
 
 > # Part 1: Artificial Intelligence Foundations
 
-[← Home](index.md) 💠 [→ Next: Part 2: Generative AI with Java →](generative-ai-with-java.md) 💠 [→ Next: Part 3: Generative AI with Spring](generative-ai-with-spring.md)
+[← Home](index.md) 🔸 [→ Next: Part 2: Generative AI with Java →](generative-ai-with-java.md) 🔸 [→ Next: Part 3: Generative AI with Spring](generative-ai-with-spring.md)
 
 
 ## Table of Contents
@@ -1422,4 +1422,4 @@ Java is useful for building secure, scalable enterprise services that integrate 
 
 ---
 
-[← Home](index.md) 💠 [→ Next: Part 2: Generative AI with Java →](generative-ai-with-java.md) 💠 [→ Next: Part 3: Generative AI with Spring](generative-ai-with-spring.md)
+[← Home](index.md) 🔸 [→ Next: Part 2: Generative AI with Java →](generative-ai-with-java.md) 🔸 [→ Next: Part 3: Generative AI with Spring](generative-ai-with-spring.md)
