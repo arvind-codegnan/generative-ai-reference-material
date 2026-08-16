@@ -7,8 +7,8 @@
 The reference material is suitable for:
 
 - Learners who are Java freshers or working professionals.
-- Learners who understand basic Java syntax and object-oriented programming
-- Learners beginning AI application development
+- Learners who understand basic Java syntax and object-oriented programming.
+- Learners beginning AI application development.
 
 ## Prerequisites
 
@@ -21,7 +21,7 @@ Learners should understand:
 - REST API fundamentals
 - Environment variables
 - Basic SQL and JDBC
-- Spring fundamentals, especially dependency injection, Spring beans, configuration, services, and REST controllers
+- Spring fundamentals, especially dependency injection, beans, configuration, services, and REST controllers
 
 ## Learning Outcomes
 
