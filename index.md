@@ -39,7 +39,7 @@ After completing both parts, learners should be able to:
 - Integrate Spring Boot applications with Spring AI.
 - Apply validation, security, evaluation, observability, and cost controls.
 
-## Reference Material Path
+## Learning Path
 
 | Part | Title | Main coverage |
 | --- | --- | --- |
