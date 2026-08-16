@@ -38,7 +38,7 @@
 - [30. Cost and Performance](#30-cost-and-performance)
 - [31. Model Context Protocol](#31-model-context-protocol)
 - [32. Suggested Package Structure](#32-suggested-package-structure)
-- [33. Mini-Project: Java Learning Assistant](#33-mini-project-java-learning-assistant)
+- [33. Capstone Project: Java Learning Assistant](#33-capstone-project-java-learning-assistant)
 - [34. Common Errors](#34-common-errors)
 - [35. Frequently Asked Interview Questions](#35-frequently-asked-interview-questions)
 
@@ -1648,7 +1648,7 @@ Organize by feature when the application grows. The important principle is separ
 
 [↑ Go to Table of Contents](#table-of-contents)
 
-## 33. Mini-Project: Java Learning Assistant
+## 33. Capstone Project: Java Learning Assistant
 
 Build the application in stages.
 
