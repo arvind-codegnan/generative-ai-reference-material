@@ -44,10 +44,7 @@
 - [35. Predictive AI vs Generative AI](#35-predictive-ai-vs-generative-ai)
 - [36. From AI Foundations to Generative AI](#36-from-ai-foundations-to-generative-ai)
 - [37. Common Misconceptions](#37-common-misconceptions)
-- [38. Practice Exercises](#38-practice-exercises)
-- [39. Frequently Asked Interview Questions](#39-frequently-asked-interview-questions)
-- [40. Quick Revision](#40-quick-revision)
-- [41. Glossary](#41-glossary)
+- [38. Frequently Asked Interview Questions](#38-frequently-asked-interview-questions)
 
 ## 1. What Is Artificial Intelligence?
 
@@ -225,6 +222,8 @@ AI is the broader goal of creating systems that perform intelligent tasks. An AI
 
 AI should not replace ordinary Java logic when a simple, stable rule solves the problem correctly.
 
+[↑ Go to Table of Contents](#table-of-contents)
+
 ## 5. A Brief History of Artificial Intelligence
 
 AI developed through several waves rather than appearing suddenly.
@@ -255,6 +254,8 @@ Progress in AI has been influenced by:
 
 AI history also contains periods of reduced funding and expectations, sometimes called **AI winters**. This reminds developers to separate proven capabilities from marketing claims.
 
+[↑ Go to Table of Contents](#table-of-contents)
+
 ## 6. Major Goals of AI
 
 AI systems are designed to achieve one or more goals.
@@ -272,6 +273,8 @@ AI systems are designed to achieve one or more goals.
 | Content generation | Create new content | Generate a summary |
 
 A clear goal is essential. “Add AI” is not a measurable requirement. “Reduce the time required to classify support tickets while maintaining at least the approved precision” is much clearer.
+
+[↑ Go to Table of Contents](#table-of-contents)
 
 ## 7. Types of AI by Capability
 
@@ -310,6 +313,8 @@ ASI: Beyond broad human capability; hypothetical
 
 Use these terms carefully. A fluent response does not prove general intelligence.
 
+[↑ Go to Table of Contents](#table-of-contents)
+
 ## 8. Types of AI by Functionality
 
 Another common classification describes how a system uses past information.
@@ -322,6 +327,8 @@ Another common classification describes how a system uses past information.
 | Self-aware AI | Would possess awareness of itself | Hypothetical concept |
 
 The last two categories should not be confused with present-day product capabilities. A model may imitate emotional language without experiencing an emotion.
+
+[↑ Go to Table of Contents](#table-of-contents)
 
 ## 9. Major Branches of AI
 
@@ -353,6 +360,8 @@ Artificial Intelligence
 | Generative AI | Creating new text, images, audio, video, or code |
 
 Many real applications combine branches. A voice assistant may use speech recognition, NLP, search, tool execution, and speech synthesis.
+
+[↑ Go to Table of Contents](#table-of-contents)
 
 ## 10. Data: The Foundation of Modern AI
 
@@ -389,6 +398,8 @@ Important data-quality dimensions:
 
 More data is not automatically better. Relevant, lawful, representative, well-labelled data is usually more valuable than a larger collection of poor-quality data.
 
+[↑ Go to Table of Contents](#table-of-contents)
+
 ## 11. Features, Labels, and Examples
 
 A **training example** is one item used to teach a model.
@@ -415,6 +426,8 @@ Label:
 The customer ID is usually an identifier, not a useful predictive feature.
 
 **Feature engineering** is the process of selecting, transforming, or creating useful inputs. Domain knowledge is often important in this work.
+
+[↑ Go to Table of Contents](#table-of-contents)
 
 ## 12. What Is Machine Learning?
 
@@ -452,6 +465,8 @@ Prediction for New Data
 
 The learned model captures statistical relationships. It does not discover guaranteed business rules.
 
+[↑ Go to Table of Contents](#table-of-contents)
+
 ## 13. Supervised Learning
 
 In **supervised learning**, training examples contain inputs and known correct labels.
@@ -475,6 +490,8 @@ Two major supervised-learning tasks are:
 - **Regression:** Predict a numeric value.
 
 Labels require trusted historical outcomes or human annotation. Incorrect labels teach incorrect patterns.
+
+[↑ Go to Table of Contents](#table-of-contents)
 
 ## 14. Unsupervised Learning
 
@@ -503,13 +520,15 @@ Group C: Inactive customers
 
 The algorithm produces groups, but a person must interpret what those groups mean for the business.
 
+[↑ Go to Table of Contents](#table-of-contents)
+
 ## 15. Semi-Supervised and Self-Supervised Learning
 
 ### Semi-Supervised Learning
 
 Semi-supervised learning uses a small amount of labelled data and a larger amount of unlabelled data.
 
-This is useful when raw data is plentiful but human labelling is expensive.
+This is useful when raw data is plentiful, but human labelling is expensive.
 
 ```text
 Small Labelled Dataset + Large Unlabelled Dataset → Model
@@ -522,6 +541,8 @@ Self-supervised learning creates learning signals from the data itself.
 For example, a language model can learn by predicting hidden or next pieces of text. The text provides the training targets without a person manually labelling every sentence.
 
 Self-supervised learning is important for understanding how large foundation models learn general representations before task-specific use.
+
+[↑ Go to Table of Contents](#table-of-contents)
 
 ## 16. Reinforcement Learning
 
@@ -556,6 +577,8 @@ Main terms:
 Applications include game playing, robotics, resource optimization, and some model-alignment techniques.
 
 A poorly designed reward may cause unexpected behaviour. The agent optimizes the measured reward, which may not perfectly represent the real goal.
+
+[↑ Go to Table of Contents](#table-of-contents)
 
 ## 17. The Machine Learning Workflow
 
@@ -599,6 +622,8 @@ Connect the model to an application and watch for errors, drift, bias, latency, 
 
 Training is only one part of the lifecycle. Production reliability requires software engineering and continuous monitoring.
 
+[↑ Go to Table of Contents](#table-of-contents)
+
 ## 18. Training, Validation, and Test Data
 
 A dataset is commonly divided into three parts.
@@ -616,7 +641,7 @@ Complete Dataset
 └── Test Data       → Final Evaluation
 ```
 
-The test set should not influence training decisions. Otherwise the reported performance may be misleading.
+The test set should not influence training decisions. Otherwise, the reported performance may be misleading.
 
 ### Data Leakage
 
@@ -625,6 +650,8 @@ The test set should not influence training decisions. Otherwise the reported per
 Example: using a payment-recovery status recorded after a loan default to predict whether the loan will default.
 
 Leakage can produce excellent test numbers and poor real-world results.
+
+[↑ Go to Table of Contents](#table-of-contents)
 
 ## 19. Classification and Regression
 
@@ -657,6 +684,8 @@ Regression     → Number
 
 The business requirement determines the task. Predicting whether delivery will be late is classification; predicting the number of minutes late is regression.
 
+[↑ Go to Table of Contents](#table-of-contents)
+
 ## 20. Common Machine Learning Algorithms
 
 A Java application developer does not need to implement every algorithm, but should recognize common names.
@@ -684,6 +713,8 @@ There is no universally best algorithm. Selection depends on:
 - Business risk
 
 Always compare a complex model with a simpler baseline.
+
+[↑ Go to Table of Contents](#table-of-contents)
 
 ## 21. Model, Training, and Inference
 
@@ -717,6 +748,8 @@ A Java backend commonly participates in inference rather than training. It prepa
 - **Hyperparameters** are settings chosen for the training process or model configuration.
 
 Examples of hyperparameters include tree depth, learning rate, number of training passes, and some model architecture settings.
+
+[↑ Go to Table of Contents](#table-of-contents)
 
 ## 22. Underfitting and Overfitting
 
@@ -753,6 +786,8 @@ Ways to reduce overfitting include:
 - Removing leaked or irrelevant features
 
 The real goal is not to perform perfectly on remembered examples. It is to perform reliably on relevant new cases.
+
+[↑ Go to Table of Contents](#table-of-contents)
 
 ## 23. Evaluating AI Models
 
@@ -804,6 +839,8 @@ Technical performance is not enough. Also measure:
 - Safety incidents
 - Fairness across relevant groups
 
+[↑ Go to Table of Contents](#table-of-contents)
+
 ## 24. Neural Networks
 
 A neural network is a model made of connected computational units arranged in layers.
@@ -828,6 +865,8 @@ Main ideas:
 - An optimization process adjusts weights.
 
 Neural networks are inspired loosely by biological neurons, but they are mathematical systems and should not be described as artificial brains.
+
+[↑ Go to Table of Contents](#table-of-contents)
 
 ## 25. Deep Learning
 
@@ -863,6 +902,8 @@ Challenges:
 
 Large language models are based on deep-learning architectures.
 
+[↑ Go to Table of Contents](#table-of-contents)
+
 ## 26. Natural Language Processing
 
 **Natural Language Processing**, or **NLP**, enables computers to work with human language.
@@ -894,7 +935,9 @@ Classification, Extraction, Search, or Generation
 
 Language is difficult because it contains ambiguity, context, idioms, sarcasm, cultural references, and domain-specific meanings.
 
-Traditional NLP systems often used rules and task-specific statistical models. Modern NLP increasingly uses deep-learning and foundation models.
+Traditional NLP systems often used rules and task-specific statistical models. Modern NLP increasingly uses deep learning and foundation models.
+
+[↑ Go to Table of Contents](#table-of-contents)
 
 ## 27. Computer Vision and Speech AI
 
@@ -933,6 +976,8 @@ Text  → Speech Synthesis   → Audio
 ```
 
 Accuracy can vary because of accents, background noise, recording quality, language, and domain vocabulary.
+
+[↑ Go to Table of Contents](#table-of-contents)
 
 ## 28. Expert Systems, Robotics, and Recommendation Systems
 
@@ -977,6 +1022,8 @@ Approaches include:
 
 Recommendations influence user choices, so diversity, fairness, transparency, and feedback loops matter.
 
+[↑ Go to Table of Contents](#table-of-contents)
+
 ## 29. AI Agents
 
 An **agent** observes an environment and performs actions to achieve a goal.
@@ -1002,6 +1049,8 @@ Examples:
 - A software assistant that calls approved APIs
 
 Agent behaviour should be constrained by permissions, validation, budgets, timeouts, and human approval. Giving a model a tool does not give it authority to use that tool without application checks.
+
+[↑ Go to Table of Contents](#table-of-contents)
 
 ## 30. Knowledge Representation, Reasoning, Search, and Planning
 
@@ -1043,6 +1092,8 @@ Examples:
 Planning chooses actions to reach a goal while respecting constraints.
 
 These symbolic techniques may be combined with learned models. Hybrid systems often use AI for uncertain perception and ordinary code or rules for reliable decisions.
+
+[↑ Go to Table of Contents](#table-of-contents)
 
 ## 31. The AI Application Lifecycle
 
@@ -1087,6 +1138,8 @@ Example: buying patterns learned before a major market change may no longer pred
 
 MLOps applies engineering practices to model development, deployment, monitoring, and governance.
 
+[↑ Go to Table of Contents](#table-of-contents)
+
 ## 32. Responsible AI
 
 Responsible AI means designing, building, and operating AI systems with attention to human impact.
@@ -1118,6 +1171,8 @@ Questions to ask before release:
 
 Responsible AI is an engineering requirement, not only a policy document.
 
+[↑ Go to Table of Contents](#table-of-contents)
+
 ## 33. Limitations and Risks of AI
 
 AI systems have important limitations.
@@ -1132,7 +1187,7 @@ Models can reproduce errors and biases present in their data.
 
 ### Limited Generalization
 
-A model may fail on situations different from its training or evaluation examples.
+A model may fail in situations different from its training or evaluation examples.
 
 ### Explainability Challenges
 
@@ -1151,6 +1206,8 @@ Attackers may manipulate inputs, steal models or data, abuse tools, or extract c
 A model's decisions may influence future data. For example, recommending only popular products can make them even more popular and reduce diversity.
 
 Use AI where uncertainty is acceptable and controlled. Use deterministic Java rules for strict constraints, permissions, calculations, and safety boundaries.
+
+[↑ Go to Table of Contents](#table-of-contents)
 
 ## 34. The Role of Java in AI Applications
 
@@ -1214,6 +1271,8 @@ public record ChurnPrediction(
 
 The Java service should validate the probability range, record the model version, handle timeouts, and avoid making an unreviewed high-impact decision.
 
+[↑ Go to Table of Contents](#table-of-contents)
+
 ## 35. Predictive AI vs Generative AI
 
 Predictive and generative systems solve different problems.
@@ -1243,6 +1302,8 @@ A real system may combine both:
 
 The generative model should not invent the risk score or replace authorization rules.
 
+[↑ Go to Table of Contents](#table-of-contents)
+
 ## 36. From AI Foundations to Generative AI
 
 Generative AI builds on the concepts introduced in these notes.
@@ -1259,25 +1320,7 @@ Generative AI builds on the concepts introduced in these notes.
 | Responsible AI | Privacy, bias, security, and human oversight remain necessary |
 | Agents | Generative models may plan and request approved tools |
 
-Next learning path:
-
-```text
-AI Foundations
-      |
-      v
-Generative Models and Large Language Models
-      |
-      v
-Prompts, Tokens, Context, and Structured Output
-      |
-      v
-Embeddings, Vector Databases, RAG, and Tools
-      |
-      v
-Java and Spring AI Integration
-```
-
-Continue with [Generative AI Notes for Java Freshers](generative-ai-notes-for-java-freshers.md).
+[↑ Go to Table of Contents](#table-of-contents)
 
 ## 37. Common Misconceptions
 
@@ -1296,53 +1339,9 @@ Continue with [Generative AI Notes for Java Freshers](generative-ai-notes-for-ja
 | AI eliminates human responsibility | People and organizations remain accountable for system use |
 | Java cannot be used for AI | Java is widely used to integrate and operate AI in enterprise applications |
 
-## 38. Practice Exercises
+[↑ Go to Table of Contents](#table-of-contents)
 
-### Concept Exercises
-
-1. Classify each system as traditional programming, automation, predictive AI, or Generative AI:
-   - Monthly salary calculation
-   - Spam detection
-   - Scheduled database backup
-   - Product-description generation
-2. Give three classification examples and three regression examples.
-3. Explain why training accuracy alone is insufficient.
-4. Identify possible features and a label for employee-attrition prediction.
-5. Draw the training and inference flows separately.
-6. Give one example of data leakage.
-7. Explain a situation in which precision matters more than recall.
-8. Explain a situation in which recall matters more than precision.
-9. List five risks of an AI-based loan application system.
-10. Describe which parts of an AI application should remain deterministic Java code.
-
-### Scenario: Support-Ticket Classification
-
-A company wants to classify support tickets as `BILLING`, `TECHNICAL`, `ACCOUNT`, or `OTHER`.
-
-Answer the following:
-
-1. Is this classification or regression?
-2. What is one training example?
-3. What is the feature data?
-4. What is the label?
-5. How would incorrect labels affect the model?
-6. Which metrics would you review?
-7. What should happen when model confidence is low?
-8. What should the Java application log?
-9. Which personal data should be removed or protected?
-10. How could the system be monitored after deployment?
-
-### Scenario: AI-Assisted Loan Review
-
-Design a responsibility table with these columns:
-
-```text
-Operation | AI Model | Java Rule | Human Reviewer
-```
-
-Include credit-risk prediction, legal eligibility, missing-document checks, explanation drafting, approval, and appeal handling.
-
-## 39. Frequently Asked Interview Questions
+## 38. Frequently Asked Interview Questions
 
 ### What Is Artificial Intelligence?
 
@@ -1419,6 +1418,8 @@ No. AI handles uncertain, pattern-based tasks, while Java code remains necessary
 ### Why Is Java Useful in AI Systems?
 
 Java is useful for building secure, scalable enterprise services that integrate models with APIs, databases, business rules, monitoring, and production infrastructure.
+
+[↑ Go to Table of Contents](#table-of-contents)
 
 ---
 
