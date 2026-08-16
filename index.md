@@ -43,18 +43,17 @@ After completing both parts, learners should be able to:
 
 | Part | Title | Main coverage |
 | --- | --- | --- |
-| 1 | [Part 1: Artificial Intelligence Foundations](artificial-intelligence-foundations.md) | AI foundations, prompts, tokens, structured output, embeddings, vector databases, RAG, tools, Java `HttpClient`, streaming, memory, evaluation, security, and cost |
-| 2 | [Part 2: Generative AI with Java](generative-ai-with-java.md) | AI foundations, prompts, tokens, structured output, embeddings, vector databases, RAG, tools, Java `HttpClient`, streaming, memory, evaluation, security, and cost |
+| 1 | [Part 1: Artificial Intelligence Foundations](artificial-intelligence-foundations.md) | AI foundations, machine learning, deep learning, neural networks, natural language processing, models, agents, limitations, and risks |
+| 2 | [Part 2: Generative AI with Java](generative-ai-with-java.md) | Generative AI foundations, prompts, tokens, structured output, embeddings, vector databases, RAG, tools, Java `HttpClient`, streaming, memory, evaluation, security, and cost |
 | 3 | [Part 3: Generative AI with Spring](generative-ai-with-spring.md) | Spring AI, `ChatClient`, advisors, JDBC chat memory, tool calling, vector stores, document ETL, RAG, PGvector, observability, testing, and MCP |
 
 ## Recommended Study Order
 
-1. Complete Part 1: Generative AI with Java.
-2. Revise prompts, structured output, embeddings, RAG, tools, and conversation memory.
-3. Continue to Part 2: Generative AI with Java.
-4. Revise prompts, structured output, embeddings, RAG, tools, and conversation memory.
-5. Continue to Part 3: Generative AI with Spring.
-6. Build the Java Learning Assistant mini-project described in Part 2.
+1. Start with Part 1: Artificial Intelligence Foundations.
+2. Continue to Part 2: Generative AI with Java.
+3. Revise prompts, structured output, embeddings, RAG, tools, and conversation memory.
+4. Continue to Part 3: Generative AI with Spring.
+5. Build the Java Learning Assistant capstone project described in Part 3.
 
 ## Technology Baseline
 
