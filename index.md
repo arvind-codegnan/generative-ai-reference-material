@@ -43,7 +43,7 @@ After completing both parts, learners should be able to:
 
 | Part | Title | Main coverage |
 | --- | --- | --- |
-| 1 | [Part 1: Generative AI with Java](artificial-intelligence.md) | AI foundations, prompts, tokens, structured output, embeddings, vector databases, RAG, tools, Java `HttpClient`, streaming, memory, evaluation, security, and cost |
+| 1 | [Part 1: Artificial Intelligence Foundations](artificial-intelligence.md) | AI foundations, prompts, tokens, structured output, embeddings, vector databases, RAG, tools, Java `HttpClient`, streaming, memory, evaluation, security, and cost |
 | 2 | [Part 2: Generative AI with Java](generative-ai-with-java.md) | AI foundations, prompts, tokens, structured output, embeddings, vector databases, RAG, tools, Java `HttpClient`, streaming, memory, evaluation, security, and cost |
 | 3 | [Part 3: Generative AI with Spring](generative-ai-with-spring.md) | Spring AI, `ChatClient`, advisors, JDBC chat memory, tool calling, vector stores, document ETL, RAG, PGvector, observability, testing, and MCP |
 
@@ -69,4 +69,4 @@ After completing both parts, learners should be able to:
 
 ---
 
-[Part 1: Artificial Intelligence](artificial-intelligence.md) ▪️[Part 2: Generative AI with Java](generative-ai-with-java.md) ▪️ [Part 3: Generative AI with Spring](generative-ai-with-spring.md)
+[Part 1: Artificial Intelligence Foundations](artificial-intelligence.md) ▪️[Part 2: Generative AI with Java](generative-ai-with-java.md) ▪️ [Part 3: Generative AI with Spring](generative-ai-with-spring.md)
