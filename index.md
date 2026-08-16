@@ -1,6 +1,6 @@
 # Generative AI for Java Professionals
 
-> A two-part reference material covering Generative AI first with Java and then with Spring.
+> A three-part reference material covering Artificial Intelligence Foundations, Generative AI with Java, and then with Spring.
 
 ## Target Audience
 
@@ -69,4 +69,4 @@ After completing both parts, learners should be able to:
 
 ---
 
-[Part 1: Artificial Intelligence Foundations](artificial-intelligence-foundations.md) 💠 [Part 2: Generative AI with Java](generative-ai-with-java.md) 💠 [Part 3: Generative AI with Spring](generative-ai-with-spring.md)
+[Part 1: Artificial Intelligence Foundations](artificial-intelligence-foundations.md) 🔸 [Part 2: Generative AI with Java](generative-ai-with-java.md) 🔸 [Part 3: Generative AI with Spring](generative-ai-with-spring.md)
