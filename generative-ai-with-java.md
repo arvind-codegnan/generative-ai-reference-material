@@ -2,7 +2,7 @@
 
 > # Part 2: Generative AI with Java ##
 
-[← Home](index.md) ▪️ [← Previous: Part 1: Artificial Intelligence Foundations →](artificial-intelligence-foundations.md) ▪️ [→ Next: Part 2: Generative AI with Spring](generative-ai-with-spring.md)
+[← Home](index.md) ▪️ [← Previous: Part 1: Artificial Intelligence Foundations](artificial-intelligence-foundations.md) ▪️ [→ Next: Part 2: Generative AI with Spring](generative-ai-with-spring.md)
 
 ## Table of Contents
 
@@ -1055,4 +1055,4 @@ Generative AI can assist with coding and analysis, but Java developers are still
 
 ---
 
-[← Home](index.md) ▪️ [← Previous: Part 1: Artificial Intelligence Foundations →](artificial-intelligence-foundations.md) ▪️ [→ Next: Part 2: Generative AI with Spring](generative-ai-with-spring.md)
+[← Home](index.md) ▪️ [← Previous: Part 1: Artificial Intelligence Foundations](artificial-intelligence-foundations.md) ▪️ [→ Next: Part 2: Generative AI with Spring](generative-ai-with-spring.md)
