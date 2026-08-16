@@ -1,6 +1,8 @@
 # Generative AI for Java Professionals
 
-> # Part 2: Generative AI with Spring ##
+> # Part 3: Generative AI with Spring ##
+
+[← Home](index.md) 💠 [← Previous: Part 2: Generative AI with Java](generative-ai-with-java.md) 💠 [← Previous: Part 1: Artificial Intelligence Foundations](artificial-intelligence-foundations.md)
 
 ## Table of Contents
 
@@ -1824,4 +1826,4 @@ Token usage affects cost, context-window limits, response time, and the amount o
 
 ---
 
-[Home](index.md) ▪️ [Part 1: Generative AI with Java](generative-ai-with-java.md)
+[← Home](index.md) 💠 [← Previous: Part 2: Generative AI with Java](generative-ai-with-java.md) 💠 [← Previous: Part 1: Artificial Intelligence Foundations](artificial-intelligence-foundations.md)
