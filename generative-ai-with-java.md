@@ -1,6 +1,8 @@
 # Generative AI for Java Professionals
 
-> # Part 1: Generative AI with Java ##
+> # Part 2: Generative AI with Java ##
+
+[← Home](index.md) ▪️ [← Previous: Part 1: Artificial Intelligence Foundations →](artificial-intelligence-foundations.md) ▪️ [→ Next: Part 2: Generative AI with Spring](generative-ai-with-spring.md)
 
 ## Table of Contents
 
@@ -27,7 +29,7 @@
 - [21. Asynchronous and Streaming Responses](#21-asynchronous-and-streaming-responses)
 - [22. Conversation Memory](#22-conversation-memory)
 - [23. Evaluating AI Responses](#23-evaluating-ai-responses)
-- [24. Security Privacy and Responsible AI](#24-security-privacy-and-responsible-ai)
+- [24. Security, Privacy and Responsible AI](#24-security-privacy-and-responsible-ai)
 - [25. Cost and Performance](#25-cost-and-performance)
 - [26. Generative AI Best Practices](#26-generative-ai-best-practices)
 - [27. Common Generative AI Errors](#27-common-generative-ai-errors)
@@ -1053,4 +1055,4 @@ Generative AI can assist with coding and analysis, but Java developers are still
 
 ---
 
-[Home](index.md) ▪️ [Part 2: Generative AI with Spring](generative-ai-with-spring.md)
+[← Home](index.md) ▪️ [← Previous: Part 1: Artificial Intelligence Foundations →](artificial-intelligence-foundations.md) ▪️ [→ Next: Part 2: Generative AI with Spring](generative-ai-with-spring.md)
