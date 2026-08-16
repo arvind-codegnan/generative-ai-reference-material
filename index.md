@@ -49,11 +49,13 @@ After completing both parts, learners should be able to:
 
 ## Recommended Study Order
 
-1. Start with Part 1: Artificial Intelligence Foundations.
-2. Continue to Part 2: Generative AI with Java.
-3. Revise prompts, structured output, embeddings, RAG, tools, and conversation memory.
-4. Continue to Part 3: Generative AI with Spring.
-5. Build the Java Learning Assistant capstone project described in Part 3.
+1. Start with Part 1: Artificial Intelligence Foundations
+   Revise
+2. Continue to Part 2: Generative AI with Java
+   Revise
+3. Continue to Part 3: Generative AI with Spring
+   Revise
+4. Build Capstone project
 
 ## Technology Baseline
 
